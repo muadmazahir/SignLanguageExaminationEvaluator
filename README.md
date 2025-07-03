@@ -1,6 +1,36 @@
-# Automatically evaluating system for sign language examination
-This project is an automatically evaluating system for sign language examinations. Sign language examinations usually consist of two components: a written component and a practical component. The written component tests the exam candidate’s theoretical knowledge on sign language and issues related to it, such as ethics surrounding deaf people. In the practical component the candidate is expected to exhibit his knowledge on sign language by physically doing different hand signs and gestures. In most cases, these examinations are carried out in a traditional way, where the evaluation is done manually by a person. This obviously comes with a lot of different challenges and obstacles. It requires a lot of effort and time from both the candidate and evaluator. It brings about many logistical complications as well. All of this results in the entire process being unnecessarily costly and time consuming. A complete automatization of these examinations seems like the logical thing to do, but it has proven to be a challenging task. If the examination consisted purely of multiple-choice questions, it would be relatively simple to create an application which can automatically evaluate it. This would be done by simply comparing the submitted answers to a pre-stored answer. But if the examination consists of descriptive questions, such as ‘how can we solve this issue’, the task of automatically evaluating it becomes a little more complicated. In the case of descriptive questions there isn’t a single fixed answer which we could store in advance and compare the submitted answer to. So, we need to find a workaround to this problem. The other major challenge that we face when attempting to automatize these examinations is the evaluation of the practical component of the exam. Since it’s physical hand signs and gestures that is evaluated here, the computer is supposed to take them in as visual input and decide whether they are correct. Historically, computers have not been particularly good at these kinds of tasks. However, the recent revolution in the field of Artificial Intelligence, especially machine learning, has made it possible for us to create a solution for the problems mentioned above, which is what we will be attempting to do in this project. The system will be in the form of an application, which will assess both the written and the practical test. It will make use of machine learning technologies and techniques such as Natural Language Processing, Artificial Neural Network, etc.
+# Sign Language Examination Evaluator
 
-The solution through the incorporation of relatively new technologies, will try to find feasible solutions to the problems that the currently existing systems face. For the written component the candidate will be expected to provide descriptive answers. The challenge of course is to evaluate the correctness of the provided answer and give it a score, since it is not as simple as correcting a multiple-choice question. This is where Natural Language Processing (NLP), a sub-field of machine learning, comes into play. NLP allows the computer to analyze language, understand its patterns and structure, and do semantic analysis. This is very useful to compare the meanings of different sentences rather than compare only the words used in it. So, two separate sentences which have the same meaning but is written using two different set of words can be shown to be equivalent. The proposed system will have a pre-stored model answer for each question. The semantics of the answer given by the candidate will be compared to the model answer and judging by the closeness of the answer to the model answer a score will be generated.
+An automated system for evaluating sign language examinations using NLP and computer vision technologies.
 
-The second task of the application is to automatically evaluate the practical test. This is done through a machine learning technique called Object Detection. The hand gesture or hand sign is taken as visual input through the webcam and is evaluated by an Artificial Neural Network (ANN). ANN is a machine learning technology that tries to understand patterns in data by consuming large amounts of it. It’s used for many different purposes but in this case, it’s used for classification. This basically means it decides whether or not an input belongs to a particular predefined category. In the project at hand, the ANN will be used to decide whether the hand sign provided by the candidate actually belongs to a category and if so, whether it’s the correct one. The system will limit itself to evaluating simple hand signs for now. The visual input provided through the webcam will be accepted with the help of an open-source computer vision and machine learning software library called OpenCV.
+## Overview
+
+Sign language examinations typically consist of two components:
+- **Written Component**: Tests theoretical knowledge of sign language and related topics (ethics, deaf culture, etc.)
+- **Practical Component**: Evaluates the candidate's ability to perform hand signs and gestures
+
+Traditional manual evaluation methods are time-consuming, costly, and logistically complex. This project aims to automate both components using AI technologies.
+
+## Solution Architecture
+
+### Written Component Evaluation
+- **Technology**: Natural Language Processing (NLP)
+- **Approach**: Semantic analysis to compare candidate answers with model responses
+- **Process**:
+  1. Pre-stored model answers for each question
+  2. Semantic comparison between candidate and model answers
+  3. Automated scoring based on semantic similarity
+
+### Practical Component Evaluation
+- **Technology**: Object Detection with Artificial Neural Networks (ANN)
+- **Approach**: Real-time hand gesture recognition and classification
+- **Process**:
+  1. Webcam input capture using OpenCV
+  2. Hand gesture detection and preprocessing
+  3. ANN-based classification of hand signs
+  4. Automated scoring based on gesture accuracy
+
+## Technologies Used
+
+- **Natural Language Processing**: For semantic analysis of written responses
+- **Artificial Neural Networks**: For hand gesture classification
+- **Computer Vision**: OpenCV for image processing and webcam integration
